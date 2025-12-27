@@ -1,85 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ellsworth Wellness</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ellsworth Wellness – Functional and integrative approach to health, vitality, and longevity.">
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f7f7;
-      color: #333;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      background: #ffffff;
-    }
-    h1 {
-      color: #1a3c40;
-    }
-    h2 {
-      color: #2f5d62;
-    }
-    a {
-      color: #2f5d62;
-      text-decoration: none;
-    }
-    footer {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      font-size: 0.9em;
-      color: #666;
-    }
-  </style>
+  <meta name="description" content="Ellsworth Wellness — holistic health, counseling, and wellbeing services." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="theme-color" content="#0b6e4f" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">Ellsworth Wellness</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="container">
-  <h1>Ellsworth Wellness</h1>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Restore balance. Thrive again.</h1>
+        <p class="lead">Personalized wellness, counseling, and holistic support to help you feel your best.</p>
+        <p class="hero-cta">
+          <a class="btn primary" href="#contact">Book a consultation</a>
+          <a class="btn ghost" href="#about">Learn more</a>
+        </p>
+      </div>
+    </section>
 
-  <p>
-    Ellsworth Wellness provides a thoughtful, evidence-informed approach to health,
-    vitality, and longevity. Our focus is on identifying root causes, restoring
-    physiological balance, and supporting long-term wellness.
-  </p>
+    <section id="services" class="container services">
+      <h2>Our Services</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Individual Counseling</h3>
+          <p>Compassionate one-on-one counseling tailored to your goals and needs.</p>
+        </article>
+        <article class="card">
+          <h3>Holistic Wellness</h3>
+          <p>Nutrition, mindfulness, and lifestyle coaching to support long-term wellbeing.</p>
+        </article>
+        <article class="card">
+          <h3>Workshops & Groups</h3>
+          <p>Interactive workshops on stress reduction, sleep, and healthy routines.</p>
+        </article>
+      </div>
+    </section>
 
-  <h2>Our Approach</h2>
-  <p>
-    We emphasize metabolic health, hormonal balance, cognitive resilience,
-    immune optimization, and lifestyle-based interventions grounded in
-    functional and integrative medicine principles.
-  </p>
+    <section id="about" class="about container">
+      <h2>About Ellsworth Wellness</h2>
+      <p>We combine evidence-based counseling with holistic approaches to help you build resilience and sustainable wellbeing. Our practitioners are licensed and experienced in integrative care.</p>
+    </section>
 
-  <h2>Areas of Focus</h2>
-  <ul>
-    <li>Fatigue, brain fog, and low stamina</li>
-    <li>Metabolic and insulin resistance</li>
-    <li>Hormonal optimization</li>
-    <li>Cognitive health and longevity</li>
-    <li>Inflammation and toxin burden</li>
-  </ul>
+    <section id="contact" class="contact container">
+      <h2>Contact & Bookings</h2>
+      <p>Fill out the form below and we’ll get back to you within 48 hours.</p>
 
-  <h2>Contact</h2>
-  <p>
-    For inquiries, please email:<br>
-    <strong>info@ellsworthwellness.com</strong>
-  </p>
+      <!-- Replace the action URL with your Formspree form endpoint or your backend endpoint -->
+      <form class="contact-form" method="POST" action="https://formspree.io/f/{YOUR_FORMSPREE_ID}">
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button class="btn primary" type="submit">Send message</button>
+      </form>
+    </section>
+  </main>
 
-  <footer>
-    <p>
-      © 2025 Ellsworth Wellness. All rights reserved.<br>
-      Information provided is for educational purposes only and does not replace
-      individualized medical care.
-    </p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Ellsworth Wellness. All rights reserved.</p>
+      <p class="small">Follow us on <a href="#">Instagram</a> · <a href="#">Facebook</a></p>
+    </div>
   </footer>
-</div>
 
+  <script>
+    // small script: mobile nav toggle and dynamic year
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      document.getElementById('site-nav').classList.toggle('open');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
