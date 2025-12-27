@@ -1,30 +1,19 @@
-# Ellsworth-Wellness — Website (Starter)
+# Ellsworth-Wellness — Jekyll site (editable)
 
-This repository contains a simple static website starter for Ellsworth Wellness.
+This repo uses Jekyll so site content is plain Markdown and easy to edit in the GitHub web editor.
 
-## What’s included
-- `index.html` — single-page layout with hero, services, about, and contact
-- `assets/css/styles.css` — responsive styles
-- A contact form wired to Formspree (replace `{YOUR_FORMSPREE_ID}`)
+How to edit
+- Go to the GitHub repo page, open the file you want (for example `about.md`) and click the pencil icon to edit in the browser, then commit the change.
+- Add images to `assets/images/` and reference them in Markdown: `![alt text](/assets/images/name.jpg)`
 
-## Quick local preview
-1. Clone the repo.
-2. Serve locally (example using Python)
-   - `python -m http.server 8000` (then open http://localhost:8000)
+Preview locally (optional)
+1. Install Ruby and Jekyll (only if you want to build locally).
+2. Run `bundle exec jekyll serve` and open http://localhost:4000
 
-## Customization
-- Replace site text in `index.html`.
-- Replace brand color in `assets/css/styles.css` (CSS variable `--brand`).
-- Replace the contact form `action` URL with your Formspree form endpoint or your own backend.
-- Add images in `assets/images/` and reference them in the HTML.
+Deploy with GitHub Pages
+- On GitHub, go to Settings → Pages and set the site source to the branch root (e.g. `website-starter` branch, folder `/`).
+- GitHub Pages will build the Jekyll site automatically.
 
-## Deploy
-- GitHub Pages: push to `main` (or `gh-pages`) and enable Pages in repository settings; set the site source to the branch root.
-- Vercel/Netlify: connect the repo and deploy; they’ll pick up the static site automatically.
-
-## Next steps I can help with
-- Add a blog (Markdown or headless CMS)
-- Switch to Next.js or another framework for dynamic pages
-- Add booking integration (Calendly, Acuity)
-- Implement SEO meta tags, sitemap, and analytics
-- Create a custom domain and automatic HTTPS
+Notes
+- Replace the Formspree placeholder in `contact.md` with your real Formspree ID or backend URL.
+- If you prefer a richer admin UI later, we can add Netlify CMS or a small headless CMS that writes directly to GitHub.

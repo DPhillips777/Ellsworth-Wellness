@@ -1,0 +1,8 @@
+title: "Ellsworth Wellness"
+email: ""
+description: "Holistic health and counseling services"
+baseurl: "" # change if site is served from a subpath
+url: "https://yourusername.github.io" # change to your GitHub Pages URL later
+markdown: kramdown
+permalink: pretty
+paginate: 0
